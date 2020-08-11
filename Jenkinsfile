@@ -4,13 +4,12 @@ stages{
   stage('Build') {
   steps{
   echo "Building Project"
-  sh './mvnw package'
   }
   }
   stage ('Archive') {
   steps{
   echo "Archieving Project"
-  archiveArtifacts artifacts: ***/*.jar, followsymlinks: false
+  
   }
   }
   stage('Build Docker Image'){
@@ -29,7 +28,6 @@ stages{
     stage ('Deploy to Dev') {
     steps{
     echo "Deploying to new Environment"
-    
     }
     }
     }
