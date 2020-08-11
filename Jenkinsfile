@@ -1,1 +1,36 @@
-
+pipeline {
+agent any
+stages{
+  stage('Build') {
+  steps{
+  echo "Building Project"
+  sh './mvnw package'
+  }
+  }
+  stage ('Archive') {
+  steps{
+  echo "Archieving Project"
+  archiveArtifacts artifacts: ***/*.jar, followsymlinks: false
+  }
+  }
+  stage('Build Docker Image'){
+  steps{
+  echo "Building Docker Image"
+  }
+  }
+  stage('Push Docker Image') {
+    steps{
+    echo "Pushing Docker Image"
+    }
+    }
+    stage ('Deploy Docker Image"
+    }
+    }
+    stage ('Deploy to Dev') {
+    steps{
+    echo "Deploying to new Environment"
+    
+    }
+    }
+    }
+    }
