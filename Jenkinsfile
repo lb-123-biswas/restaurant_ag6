@@ -22,7 +22,7 @@ stages{
     echo "Pushing Docker Image"
     }
     }
-    stage ('Deploy Docker Image"
+    stage ('Deploy Docker Image")
     }
     }
     stage ('Deploy to Dev') {
