@@ -40,8 +40,8 @@ pipeline {
     stage ('Deploy to Dev') {
       steps{
         echo "Deploying to Dev Environment"
-        sh "docker rm -f restaurent || true"
-        sh "docker run -d --name=restaurent -p 8081:8080 docker155a/restaurent"
+        bat "docker rm -f restaurent || true"
+        bat "docker run -d --name=restaurent -p 8081:8080 docker155a/restaurent"
       }
     }
   }
