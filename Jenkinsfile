@@ -40,8 +40,8 @@ pipeline {
     stage ('Deploy to Dev') {
       steps{
         echo "Deploying to Dev Environment"
-        sh "docker rm -f petclinic || true"
-        sh "docker run -d --name=petclinic -p 8081:8080 prabhavagrawal/petclinic"
+        sh "docker rm -f restaurent || true"
+        sh "docker run -d --name=restaurent -p 8081:8080 docker155a/restaurent"
       }
     }
   }
